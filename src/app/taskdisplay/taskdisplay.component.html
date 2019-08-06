@@ -1,0 +1,28 @@
+<div class="container">
+    <h3>
+        search here
+      </h3>
+<input type="text" placeholder="search here"  name="n1" #f (keyup)="search(f.value)">
+<div class="row">
+<table class="table" >
+  <thead>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Status</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of arr" >
+      <td>{{item.Id}}</td>
+      <td>{{item.Title}}</td>
+      <td>{{item.Status}}</td>
+      <td><button class="btn btn-info" (click)="onTaskDelete(item)" >Delete</button>
+      <button class="btn btn-info" (click)="onTaskEdit(item)"  >edit</button>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+  </div>
+</div>
+
+
